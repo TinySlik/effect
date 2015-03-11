@@ -1,6 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
-#include "chooseScene.h"
+#include "../../code/chooseDemoUI/chooseScene.h"
 USING_NS_CC;
 
 AppDelegate::AppDelegate() {
@@ -24,7 +24,9 @@ void AppDelegate::initGLContextAttrs()
 
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
+	
     auto director = Director::getInstance();
+	director->setDisplayStats(false);
     auto glview = director->getOpenGLView();
     if(!glview) {
         glview = GLViewImpl::create("EffectNodes for Cocos2dx 3.x");

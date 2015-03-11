@@ -73,7 +73,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;..\Classes;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;..\Classes;..\cocos2d;..\..\code;..\..\code\common;..;..\cocos2d\extensions\GUI\CCControlExtension;..\..\code\chooseDemoUI;..\..\code\lightningBolt;..\..\code\ripple;..\..\code\tail;..\..\code\ghost-like;..\..\code\2DSoftShadow;..\..\code\break;..\..\code\colorAdjust;..\..\code\laser;..\..\code\normalMapped;..\..\code\ripple_horizontal;..\..\code\shatter;..\..\code\splash;..\..\code\tinyWingsTerrain;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -137,11 +137,108 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\code\2DSoftShadow\ens2DSoftShadowNode.cpp" />
+    <ClCompile Include="..\..\code\2DSoftShadow\layer_2DSoftShadow.cpp" />
+    <ClCompile Include="..\..\code\2DSoftShadow\scene_2DSoftShadow.cpp" />
+    <ClCompile Include="..\..\code\break\ensBreakNode.cpp" />
+    <ClCompile Include="..\..\code\break\layer_break.cpp" />
+    <ClCompile Include="..\..\code\break\scene_break.cpp" />
+    <ClCompile Include="..\..\code\chooseDemoUI\chooseLayer.cpp" />
+    <ClCompile Include="..\..\code\chooseDemoUI\chooseScene.cpp" />
+    <ClCompile Include="..\..\code\colorAdjust\ensColorAdjustNode.cpp" />
+    <ClCompile Include="..\..\code\colorAdjust\layer_colorAdjust.cpp" />
+    <ClCompile Include="..\..\code\colorAdjust\scene_colorAdjust.cpp" />
+    <ClCompile Include="..\..\code\common\ensDefine.cpp" />
+    <ClCompile Include="..\..\code\common\ensFunc.cpp" />
+    <ClCompile Include="..\..\code\common\ensGLProgramWithUnifos.cpp" />
+    <ClCompile Include="..\..\code\common\ensIndexVBO.cpp" />
+    <ClCompile Include="..\..\code\common\ensMath.cpp" />
+    <ClCompile Include="..\..\code\common\ensMesh.cpp" />
+    <ClCompile Include="..\..\code\common\ensSimpleClasses.cpp" />
+    <ClCompile Include="..\..\code\ghost-like\ensGhostNode.cpp" />
+    <ClCompile Include="..\..\code\ghost-like\layer_ghostlike.cpp" />
+    <ClCompile Include="..\..\code\ghost-like\scene_ghostlike.cpp" />
+    <ClCompile Include="..\..\code\laser\ensLaserLayer.cpp" />
+    <ClCompile Include="..\..\code\laser\laserScene.cpp" />
+    <ClCompile Include="..\..\code\lightningBolt\ensLightningBoltNode.cpp" />
+    <ClCompile Include="..\..\code\lightningBolt\layer_lightningBolt.cpp" />
+    <ClCompile Include="..\..\code\lightningBolt\scene_lightningBolt.cpp" />
+    <ClCompile Include="..\..\code\normalMapped\ensNormalMappedNode.cpp" />
+    <ClCompile Include="..\..\code\normalMapped\layer_normalMapped.cpp" />
+    <ClCompile Include="..\..\code\normalMapped\scene_normalMapped.cpp" />
+    <ClCompile Include="..\..\code\ripple\ensRippleNode.cpp" />
+    <ClCompile Include="..\..\code\ripple\layer_ripple.cpp" />
+    <ClCompile Include="..\..\code\ripple\scene_ripple.cpp" />
+    <ClCompile Include="..\..\code\ripple_horizontal\ensRipple_horizontalNode.cpp" />
+    <ClCompile Include="..\..\code\ripple_horizontal\layer_ripple_horizontal.cpp" />
+    <ClCompile Include="..\..\code\ripple_horizontal\scene_ripple_horizontal.cpp" />
+    <ClCompile Include="..\..\code\shatter\ensShatterNode.cpp" />
+    <ClCompile Include="..\..\code\shatter\layer_shatter.cpp" />
+    <ClCompile Include="..\..\code\shatter\scene_shatter.cpp" />
+    <ClCompile Include="..\..\code\splash\ensSplashLayer.cpp" />
+    <ClCompile Include="..\..\code\splash\layer_splash.cpp" />
+    <ClCompile Include="..\..\code\splash\scene_splash.cpp" />
+    <ClCompile Include="..\..\code\splash\__multiSpotLightLayer.cpp" />
+    <ClCompile Include="..\..\code\tail\ensTailNode.cpp" />
+    <ClCompile Include="..\..\code\tail\layer_tail.cpp" />
+    <ClCompile Include="..\..\code\tail\scene_tail.cpp" />
+    <ClCompile Include="..\..\code\tinyWingsTerrain\ensTinyWingsTerrainNode.cpp" />
+    <ClCompile Include="..\..\code\tinyWingsTerrain\layer_tinyWingsTerrain.cpp" />
+    <ClCompile Include="..\..\code\tinyWingsTerrain\scene_tinyWingsTerrain.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\code\2DSoftShadow\ens2DSoftShadowNode.h" />
+    <ClInclude Include="..\..\code\2DSoftShadow\layer_2DSoftShadow.h" />
+    <ClInclude Include="..\..\code\2DSoftShadow\scene_2DSoftShadow.h" />
+    <ClInclude Include="..\..\code\break\ensBreakNode.h" />
+    <ClInclude Include="..\..\code\break\layer_break.h" />
+    <ClInclude Include="..\..\code\break\scene_break.h" />
+    <ClInclude Include="..\..\code\chooseDemoUI\chooseLayer.h" />
+    <ClInclude Include="..\..\code\chooseDemoUI\chooseScene.h" />
+    <ClInclude Include="..\..\code\colorAdjust\ensColorAdjustNode.h" />
+    <ClInclude Include="..\..\code\colorAdjust\layer_colorAdjust.h" />
+    <ClInclude Include="..\..\code\colorAdjust\scene_colorAdjust.h" />
+    <ClInclude Include="..\..\code\common\ensCommon.h" />
+    <ClInclude Include="..\..\code\common\ensDefine.h" />
+    <ClInclude Include="..\..\code\common\ensFunc.h" />
+    <ClInclude Include="..\..\code\common\ensGLProgramWithUnifos.h" />
+    <ClInclude Include="..\..\code\common\ensIndexVBO.h" />
+    <ClInclude Include="..\..\code\common\ensMath.h" />
+    <ClInclude Include="..\..\code\common\ensMesh.h" />
+    <ClInclude Include="..\..\code\common\ensSimpleClasses.h" />
+    <ClInclude Include="..\..\code\ghost-like\ensGhostNode.h" />
+    <ClInclude Include="..\..\code\ghost-like\layer_ghostlike.h" />
+    <ClInclude Include="..\..\code\ghost-like\scene_ghostlike.h" />
+    <ClInclude Include="..\..\code\laser\ensLaserLayer.h" />
+    <ClInclude Include="..\..\code\laser\laserScene.h" />
+    <ClInclude Include="..\..\code\lightningBolt\ensLightningBoltNode.h" />
+    <ClInclude Include="..\..\code\lightningBolt\layer_lightningBolt.h" />
+    <ClInclude Include="..\..\code\lightningBolt\scene_lightningBolt.h" />
+    <ClInclude Include="..\..\code\normalMapped\ensNormalMappedNode.h" />
+    <ClInclude Include="..\..\code\normalMapped\layer_normalMapped.h" />
+    <ClInclude Include="..\..\code\normalMapped\scene_normalMapped.h" />
+    <ClInclude Include="..\..\code\ripple\ensRippleNode.h" />
+    <ClInclude Include="..\..\code\ripple\layer_ripple.h" />
+    <ClInclude Include="..\..\code\ripple\scene_ripple.h" />
+    <ClInclude Include="..\..\code\ripple_horizontal\ensRipple_horizontalNode.h" />
+    <ClInclude Include="..\..\code\ripple_horizontal\layer_ripple_horizontal.h" />
+    <ClInclude Include="..\..\code\ripple_horizontal\scene_ripple_horizontal.h" />
+    <ClInclude Include="..\..\code\shatter\ensShatterNode.h" />
+    <ClInclude Include="..\..\code\shatter\layer_shatter.h" />
+    <ClInclude Include="..\..\code\shatter\scene_shatter.h" />
+    <ClInclude Include="..\..\code\splash\ensSplashLayer.h" />
+    <ClInclude Include="..\..\code\splash\layer_splash.h" />
+    <ClInclude Include="..\..\code\splash\scene_splash.h" />
+    <ClInclude Include="..\..\code\splash\__multiSpotLightLayer.h" />
+    <ClInclude Include="..\..\code\tail\ensTailNode.h" />
+    <ClInclude Include="..\..\code\tail\layer_tail.h" />
+    <ClInclude Include="..\..\code\tail\scene_tail.h" />
+    <ClInclude Include="..\..\code\tinyWingsTerrain\ensTinyWingsTerrainNode.h" />
+    <ClInclude Include="..\..\code\tinyWingsTerrain\layer_tinyWingsTerrain.h" />
+    <ClInclude Include="..\..\code\tinyWingsTerrain\scene_tinyWingsTerrain.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="main.h" />
