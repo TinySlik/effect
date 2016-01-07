@@ -1,3 +1,4 @@
 #when copy project folder from MAC to windows, some .DS_Store and ._xxx files appear. ignore them.
 *.DS_Store
 *._*
+*.obj
